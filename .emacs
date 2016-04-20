@@ -37,7 +37,7 @@
 
 ;; *GLOBAL MODES
 
-(auto-complete-mode 1)
+(global-auto-complete-mode 1)
 (electric-pair-mode 1)
 
 ;; *VARIABLES
@@ -189,6 +189,9 @@ into a NOTE."
      (add-to-list 'ac-modes 'cider-repl-mode)))
 
 (add-hook 'cider-mode-hook #'eldoc-mode)
+
+;; Javascript
+(add-to-list 'auto-mode-alist '("\\.js" . js2-mode))
 
 ;; *MAC stuff
 
